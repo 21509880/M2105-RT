@@ -11,6 +11,8 @@
     if(array_key_exists("nom",$_POST)) {
         $_SESSION["user"]=$_POST["nom"];
         }
-
+    if (array_key_exists("ckremember",$_POST)) {
+        setcookie("nom",$_POST["nom"],time()+5*60);
+    }
     getFooter();
 ?>
