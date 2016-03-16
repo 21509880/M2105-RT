@@ -3,5 +3,5 @@
     include("ex1");
 ?>
 <?php
-    echo $nom
+    echo $nom;
 ?>

@@ -1,15 +1,18 @@
 <?php
-    #Créer l'en tête html d'une page si la personne a une session ouverte
-    function getHeader($startSession,$title){
-        if ($startSession==True) {
-            echo "<html><head><title>$title</title><meta charset='UTF-8'></head><body>";
+    #Permet  d'insérer l'en-tête HTLM5 d'une page
+    function getHeader($startsession,$title){
+
+            if ($startsession==False) {
+                    session_start();
+                    echo "<!DOCTYPE html><htmtl><head><meta charset='UTF-8'><title>$title</title></head><body>";
         }
-        else{
-            session_start();
-            echo "<html><head><title>$title</title><meta charset='UTF-8'></head><body>";
+        else {
+                   echo "<!DOCTYPE html><htmtl><head><meta charset='UTF-8'><title>$title</title></head><body>";
         }
     }
+
     function getFooter(){
-        echo "</body></html>";
+            echo"</body></html>";
     }
 ?>
+
